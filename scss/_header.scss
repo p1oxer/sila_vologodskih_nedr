@@ -1,9 +1,137 @@
+.header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid $bgDark;
 
+    // .header__body
+    &__body {}
+}
 
+.container {}
+
+.body-header {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @include adaptiveValue("gap", 70, 15, 1920, 991);
+
+    @media (max-width:$mobileSmall) {
+        padding: 10px 0;
+    }
+
+    @media (max-width:$tablet) {
+        gap: 15px;
+    }
+
+    @media (max-width: em(1100)) {
+        @media (min-width:em(900)) {
+            justify-content: space-between;
+        }
+    }
+
+    &__logo {
+        @media (max-width: em(900)) {
+            flex: 1 1 auto;
+        }
+
+        @media (max-width:$mobileSmall) {
+            img {
+                width: rem(125);
+            }
+        }
+    }
+
+    // .body-header__city
+    &__city {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        color: $mainText;
+        flex: 1 1 auto;
+
+        @media (max-width: em(1100)) {
+            display: none;
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+
+    // .body-header__nav
+    &__nav {
+        @media (max-width: em(900)) {
+            display: none;
+        }
+    }
+
+    // .body-header__list
+    &__list {
+        display: flex;
+        flex-direction: row;
+        text-transform: uppercase;
+        @include adaptiveValue("gap", 30, 15, 1920, 767);
+    }
+
+    // .body-header__link
+    &__link {
+        color: $mainText;
+        transition: all 0.1s ease 0s;
+        font-weight: 500;
+        @include adaptiveValue("font-size", 14, 12, 1920, 767);
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $hover;
+            }
+        }
+    }
+
+    // .body-header__phone
+    &__phone {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        color: $head;
+        font-weight: 500;
+
+        a {
+            transition: all 0.1s ease 0s;
+            @include adaptiveValue("font-size", 24, 13, 1920, 320);
+
+            &:not(:last-child) {
+                margin-bottom: rem(5);
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $hover;
+                }
+            }
+        }
+
+        button {
+            text-decoration: underline;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.menu {
+    @media (min-width:em(901)){
+         display: none; 
+    }
+}
 .icon-menu {
     display: none;
 
-    @media (max-width: $tablet) {
+    @media (max-width: em(900)) {
         display: block;
         position: relative;
         width: rem(30);
@@ -65,19 +193,19 @@
         z-index: 5;
         position: relative;
         display: none;
-        padding-top: 70px;
+        padding-top: 90px;
 
         &::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            height: rem(70);
+            height: rem(90);
             width: 100%;
             background-color: $primary;
         }
 
-        @media (max-width: $tablet) {
+        @media (max-width: em(900)) {
             position: fixed;
             width: 80%;
             height: 100%;
@@ -106,5 +234,3 @@
         padding: 15px;
     }
 }
-
-
