@@ -25,7 +25,8 @@ main {
 
 .wrapper {
     display: flex;
-    flex-direction: column; min-height:100vh;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .h1 {
@@ -288,4 +289,33 @@ main {
 
 .fancybox__backdrop {
     background: rgba(0, 0, 0, 0.5);
+}
+
+.socials {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 5;
+    right: 40px;
+    top: 50%;
+    transform: translate(0px, -50%);
+
+    // .socials__item
+    &__item {
+        height: rem(55);
+        width: rem(55);
+        border-radius: 50%;
+        background-color: $primary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.1s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $hover;
+            }
+        }
+    }
 }

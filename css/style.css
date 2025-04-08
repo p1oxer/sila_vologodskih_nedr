@@ -623,6 +623,32 @@ main {
   background: rgba(0, 0, 0, 0.5);
 }
 
+.socials {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 5;
+  right: 40px;
+  top: 50%;
+  transform: translate(0px, -50%);
+}
+.socials__item {
+  height: 3.4375rem;
+  width: 3.4375rem;
+  border-radius: 50%;
+  background-color: #6096DE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s ease 0s;
+}
+@media (any-hover: hover) {
+  .socials__item:hover {
+    background-color: #AAC4E7;
+  }
+}
+
 .header {
   width: 100%;
   position: sticky;
