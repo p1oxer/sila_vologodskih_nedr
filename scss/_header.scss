@@ -3,6 +3,8 @@
     position: sticky;
     top: 0;
     border-bottom: 1px solid $bgDark;
+    background-color: #fff;
+    z-index: 5;
 
     // .header__body
     &__body {}
@@ -124,10 +126,11 @@
 }
 
 .menu {
-    @media (min-width:em(901)){
-         display: none; 
+    @media (min-width:em(901)) {
+        display: none;
     }
 }
+
 .icon-menu {
     display: none;
 

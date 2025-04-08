@@ -1,6 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,regular,500,700);
-@import url(https://fonts.googleapis.com/css?family=Onest:regular,500,700);
-@import url(https://fonts.googleapis.com/css?family=Raleway:900);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,regular,500,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Onest:regular,500,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Raleway:900&display=swap);
 * {
   padding: 0px;
   margin: 0px;
@@ -70,6 +70,10 @@ h6 {
   font-size: inherit;
 }
 
+@font-face {
+  font-family: "Sweet Mavka Script";
+  src: url("../fonts/Sweet Mavka Script.ttf");
+}
 body {
   font-family: "Onest";
   line-height: 1.2;
@@ -85,20 +89,20 @@ main {
   min-height: 100vh;
 }
 
-@media (min-width: 75em) {
+@media (min-width: 120em) {
   .h1 {
     font-size: 5rem;
   }
 }
-@media (min-width: 20em) and (max-width: 75em) {
-  @supports (font-size: clamp( 2.5rem , 1.5909090909rem  +  4.5454545455vw , 5rem )) {
+@media (min-width: 20em) and (max-width: 120em) {
+  @supports (font-size: clamp( 2.5rem , 2rem  +  2.5vw , 5rem )) {
     .h1 {
-      font-size: clamp( 2.5rem , 1.5909090909rem  +  4.5454545455vw , 5rem );
+      font-size: clamp( 2.5rem , 2rem  +  2.5vw , 5rem );
     }
   }
-  @supports not (font-size: clamp( 2.5rem , 1.5909090909rem  +  4.5454545455vw , 5rem )) {
+  @supports not (font-size: clamp( 2.5rem , 2rem  +  2.5vw , 5rem )) {
     .h1 {
-      font-size: calc(2.5rem + 2.5 * (100vw - 20rem) / 55);
+      font-size: calc(2.5rem + 2.5 * (100vw - 20rem) / 100);
     }
   }
 }
@@ -108,20 +112,20 @@ main {
   }
 }
 
-@media (min-width: 75em) {
+@media (min-width: 120em) {
   .h2 {
     font-size: 3.75rem;
   }
 }
-@media (min-width: 20em) and (max-width: 75em) {
-  @supports (font-size: clamp( 1.875rem , 1.1931818182rem  +  3.4090909091vw , 3.75rem )) {
+@media (min-width: 20em) and (max-width: 120em) {
+  @supports (font-size: clamp( 1.875rem , 1.5rem  +  1.875vw , 3.75rem )) {
     .h2 {
-      font-size: clamp( 1.875rem , 1.1931818182rem  +  3.4090909091vw , 3.75rem );
+      font-size: clamp( 1.875rem , 1.5rem  +  1.875vw , 3.75rem );
     }
   }
-  @supports not (font-size: clamp( 1.875rem , 1.1931818182rem  +  3.4090909091vw , 3.75rem )) {
+  @supports not (font-size: clamp( 1.875rem , 1.5rem  +  1.875vw , 3.75rem )) {
     .h2 {
-      font-size: calc(1.875rem + 1.875 * (100vw - 20rem) / 55);
+      font-size: calc(1.875rem + 1.875 * (100vw - 20rem) / 100);
     }
   }
 }
@@ -131,20 +135,20 @@ main {
   }
 }
 
-@media (min-width: 75em) {
+@media (min-width: 120em) {
   .h3 {
     font-size: 2.875rem;
   }
 }
-@media (min-width: 20em) and (max-width: 75em) {
-  @supports (font-size: clamp( 1.4375rem , 0.9147727273rem  +  2.6136363636vw , 2.875rem )) {
+@media (min-width: 20em) and (max-width: 120em) {
+  @supports (font-size: clamp( 1.4375rem , 1.15rem  +  1.4375vw , 2.875rem )) {
     .h3 {
-      font-size: clamp( 1.4375rem , 0.9147727273rem  +  2.6136363636vw , 2.875rem );
+      font-size: clamp( 1.4375rem , 1.15rem  +  1.4375vw , 2.875rem );
     }
   }
-  @supports not (font-size: clamp( 1.4375rem , 0.9147727273rem  +  2.6136363636vw , 2.875rem )) {
+  @supports not (font-size: clamp( 1.4375rem , 1.15rem  +  1.4375vw , 2.875rem )) {
     .h3 {
-      font-size: calc(1.4375rem + 1.4375 * (100vw - 20rem) / 55);
+      font-size: calc(1.4375rem + 1.4375 * (100vw - 20rem) / 100);
     }
   }
 }
@@ -154,20 +158,20 @@ main {
   }
 }
 
-@media (min-width: 75em) {
+@media (min-width: 120em) {
   .h4 {
     font-size: 2.125rem;
   }
 }
-@media (min-width: 20em) and (max-width: 75em) {
-  @supports (font-size: clamp( 1.25rem , 0.9318181818rem  +  1.5909090909vw , 2.125rem )) {
+@media (min-width: 20em) and (max-width: 120em) {
+  @supports (font-size: clamp( 1.25rem , 1.075rem  +  0.875vw , 2.125rem )) {
     .h4 {
-      font-size: clamp( 1.25rem , 0.9318181818rem  +  1.5909090909vw , 2.125rem );
+      font-size: clamp( 1.25rem , 1.075rem  +  0.875vw , 2.125rem );
     }
   }
-  @supports not (font-size: clamp( 1.25rem , 0.9318181818rem  +  1.5909090909vw , 2.125rem )) {
+  @supports not (font-size: clamp( 1.25rem , 1.075rem  +  0.875vw , 2.125rem )) {
     .h4 {
-      font-size: calc(1.25rem + 0.875 * (100vw - 20rem) / 55);
+      font-size: calc(1.25rem + 0.875 * (100vw - 20rem) / 100);
     }
   }
 }
@@ -177,20 +181,20 @@ main {
   }
 }
 
-@media (min-width: 75em) {
+@media (min-width: 120em) {
   .h5 {
     font-size: 1.5rem;
   }
 }
-@media (min-width: 20em) and (max-width: 75em) {
-  @supports (font-size: clamp( 1.125rem , 0.9886363636rem  +  0.6818181818vw , 1.5rem )) {
+@media (min-width: 20em) and (max-width: 120em) {
+  @supports (font-size: clamp( 1.125rem , 1.05rem  +  0.375vw , 1.5rem )) {
     .h5 {
-      font-size: clamp( 1.125rem , 0.9886363636rem  +  0.6818181818vw , 1.5rem );
+      font-size: clamp( 1.125rem , 1.05rem  +  0.375vw , 1.5rem );
     }
   }
-  @supports not (font-size: clamp( 1.125rem , 0.9886363636rem  +  0.6818181818vw , 1.5rem )) {
+  @supports not (font-size: clamp( 1.125rem , 1.05rem  +  0.375vw , 1.5rem )) {
     .h5 {
-      font-size: calc(1.125rem + 0.375 * (100vw - 20rem) / 55);
+      font-size: calc(1.125rem + 0.375 * (100vw - 20rem) / 100);
     }
   }
 }
@@ -200,20 +204,20 @@ main {
   }
 }
 
-@media (min-width: 75em) {
+@media (min-width: 120em) {
   .h6 {
     font-size: 1rem;
   }
 }
-@media (min-width: 20em) and (max-width: 75em) {
-  @supports (font-size: clamp( 0.875rem , 0.8295454545rem  +  0.2272727273vw , 1rem )) {
+@media (min-width: 20em) and (max-width: 120em) {
+  @supports (font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem )) {
     .h6 {
-      font-size: clamp( 0.875rem , 0.8295454545rem  +  0.2272727273vw , 1rem );
+      font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem );
     }
   }
-  @supports not (font-size: clamp( 0.875rem , 0.8295454545rem  +  0.2272727273vw , 1rem )) {
+  @supports not (font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem )) {
     .h6 {
-      font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 55);
+      font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 100);
     }
   }
 }
@@ -226,20 +230,20 @@ main {
 .p1 {
   font-family: "Ubuntu";
 }
-@media (min-width: 75em) {
+@media (min-width: 120em) {
   .p1 {
     font-size: 1.5rem;
   }
 }
-@media (min-width: 20em) and (max-width: 75em) {
-  @supports (font-size: clamp( 1.25rem , 1.1590909091rem  +  0.4545454545vw , 1.5rem )) {
+@media (min-width: 20em) and (max-width: 120em) {
+  @supports (font-size: clamp( 1.25rem , 1.2rem  +  0.25vw , 1.5rem )) {
     .p1 {
-      font-size: clamp( 1.25rem , 1.1590909091rem  +  0.4545454545vw , 1.5rem );
+      font-size: clamp( 1.25rem , 1.2rem  +  0.25vw , 1.5rem );
     }
   }
-  @supports not (font-size: clamp( 1.25rem , 1.1590909091rem  +  0.4545454545vw , 1.5rem )) {
+  @supports not (font-size: clamp( 1.25rem , 1.2rem  +  0.25vw , 1.5rem )) {
     .p1 {
-      font-size: calc(1.25rem + 0.25 * (100vw - 20rem) / 55);
+      font-size: calc(1.25rem + 0.25 * (100vw - 20rem) / 100);
     }
   }
 }
@@ -252,20 +256,20 @@ main {
 .p2 {
   font-family: "Ubuntu";
 }
-@media (min-width: 75em) {
+@media (min-width: 120em) {
   .p2 {
     font-size: 1rem;
   }
 }
-@media (min-width: 20em) and (max-width: 75em) {
-  @supports (font-size: clamp( 0.875rem , 0.8295454545rem  +  0.2272727273vw , 1rem )) {
+@media (min-width: 20em) and (max-width: 120em) {
+  @supports (font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem )) {
     .p2 {
-      font-size: clamp( 0.875rem , 0.8295454545rem  +  0.2272727273vw , 1rem );
+      font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem );
     }
   }
-  @supports not (font-size: clamp( 0.875rem , 0.8295454545rem  +  0.2272727273vw , 1rem )) {
+  @supports not (font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem )) {
     .p2 {
-      font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 55);
+      font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 100);
     }
   }
 }
@@ -278,20 +282,20 @@ main {
 .p3 {
   font-family: "Ubuntu";
 }
-@media (min-width: 75em) {
+@media (min-width: 120em) {
   .p3 {
     font-size: 0.875rem;
   }
 }
-@media (min-width: 20em) and (max-width: 75em) {
-  @supports (font-size: clamp( 0.75rem , 0.7045454545rem  +  0.2272727273vw , 0.875rem )) {
+@media (min-width: 20em) and (max-width: 120em) {
+  @supports (font-size: clamp( 0.75rem , 0.725rem  +  0.125vw , 0.875rem )) {
     .p3 {
-      font-size: clamp( 0.75rem , 0.7045454545rem  +  0.2272727273vw , 0.875rem );
+      font-size: clamp( 0.75rem , 0.725rem  +  0.125vw , 0.875rem );
     }
   }
-  @supports not (font-size: clamp( 0.75rem , 0.7045454545rem  +  0.2272727273vw , 0.875rem )) {
+  @supports not (font-size: clamp( 0.75rem , 0.725rem  +  0.125vw , 0.875rem )) {
     .p3 {
-      font-size: calc(0.75rem + 0.125 * (100vw - 20rem) / 55);
+      font-size: calc(0.75rem + 0.125 * (100vw - 20rem) / 100);
     }
   }
 }
@@ -330,46 +334,43 @@ main {
   }
 }
 
-@media (any-hover: hover) {
-  .swiper-button-disabled:hover {
-    background-color: inherit;
-  }
-}
-
 .button-main {
-  padding: 0px 40px;
+  padding: 0px 35px;
   background-color: #6096DE;
   color: #fff;
   transition: all 0.3s ease 0s;
-  border-radius: 3px;
+  border-radius: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 60px;
+  height: 54px;
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
+  font-family: "Ubuntu";
+  font-weight: bold;
+  text-transform: uppercase;
 }
 @media (min-width: 75em) {
   .button-main {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 @media (min-width: 20em) and (max-width: 75em) {
-  @supports (font-size: clamp( 0.875rem , 0.8295454545rem  +  0.2272727273vw , 1rem )) {
+  @supports (font-size: clamp( 0.75rem , 0.7045454545rem  +  0.2272727273vw , 0.875rem )) {
     .button-main {
-      font-size: clamp( 0.875rem , 0.8295454545rem  +  0.2272727273vw , 1rem );
+      font-size: clamp( 0.75rem , 0.7045454545rem  +  0.2272727273vw , 0.875rem );
     }
   }
-  @supports not (font-size: clamp( 0.875rem , 0.8295454545rem  +  0.2272727273vw , 1rem )) {
+  @supports not (font-size: clamp( 0.75rem , 0.7045454545rem  +  0.2272727273vw , 0.875rem )) {
     .button-main {
-      font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 55);
+      font-size: calc(0.75rem + 0.125 * (100vw - 20rem) / 55);
     }
   }
 }
 @media (max-width: 20em) {
   .button-main {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
   }
 }
 @media (max-width: 71.875em) {
@@ -389,16 +390,7 @@ main {
 }
 @media (any-hover: hover) {
   .button-main:hover {
-    background-color: #0D2362;
-  }
-}
-.button-main.inversed {
-  background-color: #fff;
-  color: #6096DE;
-}
-@media (any-hover: hover) {
-  .button-main.inversed:hover {
-    background-color: #E8EBF2;
+    background-color: #AAC4E7;
   }
 }
 .button-main.bordered {
@@ -427,26 +419,60 @@ main {
   gap: 10px;
 }
 
+.swiper-pagination-bullets {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
 .swiper-pagination-bullet {
-  height: 10px;
-  width: 10px;
+  height: 8px;
+  width: 8px;
   opacity: 1;
   margin: 0 !important;
   transition: all 0.3s ease 0s;
+  background-color: #EDE0D5;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #6096DE;
+  background-color: #C19570;
+}
+
+.swiper-btn-prev svg {
+  transform: rotate(-180deg);
 }
 
 .swiper-btn {
-  height: 15px;
+  height: 55px;
+  width: 55px;
+  background-color: #C19570;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease 0s;
 }
 @media (any-hover: hover) {
-  .swiper-btn:hover svg path {
-    transition: all 0.3s ease 0s;
-    fill: #6096DE;
+  .swiper-btn:hover {
+    background-color: #EDE0D5;
   }
+}
+@media (max-width: 75em) {
+  .swiper-btn {
+    height: 45px;
+    width: 45px;
+  }
+}
+
+.swiper-buttons {
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
+  gap: 1px;
+}
+
+.swiper-button-disabled {
+  background-color: #EDE0D5;
 }
 
 .swiper-wrapper {
@@ -633,6 +659,11 @@ main {
   top: 50%;
   transform: translate(0px, -50%);
 }
+@media (max-width: 91.25em) {
+  .socials {
+    right: 15px;
+  }
+}
 .socials__item {
   height: 3.4375rem;
   width: 3.4375rem;
@@ -654,6 +685,8 @@ main {
   position: sticky;
   top: 0;
   border-bottom: 1px solid #EDE0D5;
+  background-color: #fff;
+  z-index: 5;
 }
 .body-header {
   padding: 20px 0;
@@ -1161,5 +1194,388 @@ main {
 @media (any-hover: hover) {
   .bottom-footer__grampus a:hover {
     color: #6096DE;
+  }
+}
+.intro {
+  border-bottom: 1px solid #EDE0D5;
+  overflow: hidden;
+}
+.body-intro {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+@media (max-width: 991.98px) {
+  .body-intro {
+    margin: 0px auto;
+  }
+}
+@media (max-width: 991.98px) {
+  .body-intro {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 767.98px) {
+  .body-intro {
+    flex-direction: column-reverse;
+  }
+}
+.body-intro__inner {
+  flex: 0 0 34.4%;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 991.98px) {
+  .body-intro__inner {
+    flex: 0 0 50%;
+  }
+}
+.body-intro__title {
+  font-family: "Sweet Mavka Script";
+  color: #6096DE;
+}
+@media (min-width: 120em) {
+  .body-intro__title {
+    font-size: 5.375rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 120em) {
+  @supports (font-size: clamp( 2.6875rem , 2.15rem  +  2.6875vw , 5.375rem )) {
+    .body-intro__title {
+      font-size: clamp( 2.6875rem , 2.15rem  +  2.6875vw , 5.375rem );
+    }
+  }
+  @supports not (font-size: clamp( 2.6875rem , 2.15rem  +  2.6875vw , 5.375rem )) {
+    .body-intro__title {
+      font-size: calc(2.6875rem + 2.6875 * (100vw - 20rem) / 100);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .body-intro__title {
+    font-size: 2.6875rem;
+  }
+}
+@media (min-width: 120em) {
+  .body-intro__title {
+    margin-bottom: 1.875rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 120em) {
+  @supports (margin-bottom: clamp( 0.3125rem , 0rem  +  1.5625vw , 1.875rem )) {
+    .body-intro__title {
+      margin-bottom: clamp( 0.3125rem , 0rem  +  1.5625vw , 1.875rem );
+    }
+  }
+  @supports not (margin-bottom: clamp( 0.3125rem , 0rem  +  1.5625vw , 1.875rem )) {
+    .body-intro__title {
+      margin-bottom: calc(0.3125rem + 1.5625 * (100vw - 20rem) / 100);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .body-intro__title {
+    margin-bottom: 0.3125rem;
+  }
+}
+.body-intro__subtitle {
+  color: #464D58;
+  font-weight: 300;
+  line-height: 150%;
+}
+@media (min-width: 120em) {
+  .body-intro__subtitle {
+    margin-bottom: 2.5rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 120em) {
+  @supports (margin-bottom: clamp( 0.625rem , 0.25rem  +  1.875vw , 2.5rem )) {
+    .body-intro__subtitle {
+      margin-bottom: clamp( 0.625rem , 0.25rem  +  1.875vw , 2.5rem );
+    }
+  }
+  @supports not (margin-bottom: clamp( 0.625rem , 0.25rem  +  1.875vw , 2.5rem )) {
+    .body-intro__subtitle {
+      margin-bottom: calc(0.625rem + 1.875 * (100vw - 20rem) / 100);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .body-intro__subtitle {
+    margin-bottom: 0.625rem;
+  }
+}
+@media (min-width: 120em) {
+  .body-intro__subtitle {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 120em) {
+  @supports (font-size: clamp( 1rem , 0.4666307858rem  +  0.8611410118vw , 1.5rem )) {
+    .body-intro__subtitle {
+      font-size: clamp( 1rem , 0.4666307858rem  +  0.8611410118vw , 1.5rem );
+    }
+  }
+  @supports not (font-size: clamp( 1rem , 0.4666307858rem  +  0.8611410118vw , 1.5rem )) {
+    .body-intro__subtitle {
+      font-size: calc(1rem + 0.5 * (100vw - 61.9375rem) / 58.0625);
+    }
+  }
+}
+@media (max-width: 991.98px) {
+  .body-intro__subtitle {
+    font-size: 1rem;
+  }
+}
+.body-intro__top {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.body-intro__bottom {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media (max-width: 767.98px) {
+  .body-intro__bottom {
+    margin-top: 25px;
+  }
+}
+.body-intro__bottom .h6 {
+  font-weight: bold;
+  line-height: 140%;
+  text-transform: uppercase;
+}
+@media (min-width: 120em) {
+  .body-intro__bottom .h6 {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 120em) {
+  @supports (font-size: clamp( 0.75rem , 0.7rem  +  0.25vw , 1rem )) {
+    .body-intro__bottom .h6 {
+      font-size: clamp( 0.75rem , 0.7rem  +  0.25vw , 1rem );
+    }
+  }
+  @supports not (font-size: clamp( 0.75rem , 0.7rem  +  0.25vw , 1rem )) {
+    .body-intro__bottom .h6 {
+      font-size: calc(0.75rem + 0.25 * (100vw - 20rem) / 100);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .body-intro__bottom .h6 {
+    font-size: 0.75rem;
+  }
+}
+.body-intro__bottom .h6:not(:last-child) {
+  margin-bottom: 0.3125rem;
+}
+.body-intro__bottom .p2 {
+  color: #464D58;
+}
+@media (min-width: 120em) {
+  .body-intro__bottom .p2 {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 120em) {
+  @supports (font-size: clamp( 0.75rem , 0.7rem  +  0.25vw , 1rem )) {
+    .body-intro__bottom .p2 {
+      font-size: clamp( 0.75rem , 0.7rem  +  0.25vw , 1rem );
+    }
+  }
+  @supports not (font-size: clamp( 0.75rem , 0.7rem  +  0.25vw , 1rem )) {
+    .body-intro__bottom .p2 {
+      font-size: calc(0.75rem + 0.25 * (100vw - 20rem) / 100);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .body-intro__bottom .p2 {
+    font-size: 0.75rem;
+  }
+}
+.body-intro__bottom::before {
+  content: "";
+  position: absolute;
+  background-color: #EDE0D5;
+  height: 0.0625rem;
+  width: 150%;
+  top: 0;
+  left: -27%;
+}
+@media (max-width: 767.98px) {
+  .body-intro__bottom::before {
+    width: 110%;
+    left: -5%;
+  }
+}
+.body-intro__sliders {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media (min-width: 120em) {
+  .body-intro__sliders {
+    margin-left: 6.25rem;
+  }
+}
+@media (min-width: 75em) and (max-width: 120em) {
+  @supports (margin-left: clamp( 0.00000625rem , -10.41665rem  +  13.888875vw , 6.25rem )) {
+    .body-intro__sliders {
+      margin-left: clamp( 0.00000625rem , -10.41665rem  +  13.888875vw , 6.25rem );
+    }
+  }
+  @supports not (margin-left: clamp( 0.00000625rem , -10.41665rem  +  13.888875vw , 6.25rem )) {
+    .body-intro__sliders {
+      margin-left: calc(0.00000625rem + 6.25 * (100vw - 75rem) / 45);
+    }
+  }
+}
+@media (max-width: 991.98px) {
+  .body-intro__sliders {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+@media (max-width: 767.98px) {
+  .body-intro__sliders {
+    width: 100%;
+    height: 50vh;
+  }
+}
+.body-intro__slider-side {
+  max-width: 268.5px;
+  aspect-ratio: 285/446;
+}
+@media (max-width: 91.25em) {
+  .body-intro__slider-side {
+    max-width: 200px;
+  }
+}
+@media (max-width: 75em) {
+  .body-intro__slider-side {
+    max-width: 150px;
+  }
+}
+.slide-body-intro__item img {
+  max-width: 100%;
+}
+
+.intro-pagination {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  position: absolute;
+  bottom: 40px !important;
+  left: 50% !important;
+  transform: translate(-50%, 0px);
+}
+
+.body-intro__swiper-side-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 35px;
+  flex-direction: column;
+  position: relative;
+  margin-left: auto;
+}
+@media (max-width: 91.25em) {
+  .body-intro__swiper-side-wrapper {
+    margin: 0px auto;
+    padding-right: 0;
+  }
+}
+@media (max-width: 991.98px) {
+  .body-intro__swiper-side-wrapper {
+    display: none;
+  }
+}
+
+.body-intro__slider-main-wrapper {
+  position: relative;
+  z-index: 2;
+  max-height: 800px;
+  max-width: 555px;
+}
+@media (max-width: 91.25em) {
+  .body-intro__slider-main-wrapper {
+    max-width: 450px;
+  }
+}
+@media (max-width: 75em) {
+  .body-intro__slider-main-wrapper {
+    max-width: 350px;
+  }
+}
+@media (max-width: 767.98px) {
+  .body-intro__slider-main-wrapper {
+    max-width: 100%;
+  }
+}
+.body-intro__slider-main-wrapper .slide-body-intro {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (min-width: 767.98px) {
+  .body-intro__slider-main-wrapper .slide-body-intro {
+    max-height: 800px;
+  }
+}
+@media (min-width: 767.98px) {
+  .body-intro__slider-main-wrapper .slide-body-intro__item {
+    min-height: 100%;
+    aspect-ratio: 590/849;
+    max-height: 800px;
+  }
+}
+.body-intro__slider-main-wrapper .slide-body-intro__item img {
+  max-width: 100%;
+}
+@media (min-width: 767.98px) {
+  .body-intro__slider-main-wrapper .slide-body-intro__item img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.body-intro__slider-main-wrapper .swiper-buttons {
+  bottom: 90px;
+  right: -55px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (max-width: 75em) {
+  .body-intro__slider-main-wrapper .swiper-buttons {
+    right: -45px;
+  }
+}
+@media (max-width: 991.98px) {
+  .body-intro__slider-main-wrapper .swiper-buttons {
+    left: 50%;
+    bottom: 15px;
+    transform: translate(-50%, 0px);
+  }
+}
+
+.body-intro__swiper-side-bg {
+  position: absolute;
+  bottom: 80px;
+}
+.body-intro__swiper-side-bg img {
+  max-width: 388px;
+}
+@media (max-width: 91.25em) {
+  .body-intro__swiper-side-bg img {
+    max-width: 300px;
+  }
+}
+@media (max-width: 75em) {
+  .body-intro__swiper-side-bg img {
+    max-width: 250px;
   }
 }

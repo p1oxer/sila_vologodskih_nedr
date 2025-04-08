@@ -1,6 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,regular,500,700);
-@import url(https://fonts.googleapis.com/css?family=Onest:regular,500,700);
-@import url(https://fonts.googleapis.com/css?family=Raleway:900);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,regular,500,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Onest:regular,500,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Raleway:900&display=swap);
+
+@font-face {
+    font-family: "Sweet Mavka Script";
+    src: url("../fonts/Sweet Mavka Script.ttf");
+}
+
 $tablet: 991.98px;
 $mobile: 767.98px;
 $mobileSmall: 480.98px;
@@ -13,6 +19,7 @@ $head: #18212E;
 $mainText: #464D58;
 $cards: #fff;
 $strokeLight: #DDC5B1;
+$accent: #C19570;
 
 body {
     font-family: "Onest";
@@ -30,41 +37,57 @@ main {
 }
 
 .h1 {
-    @include adaptiveValue("font-size", 80, 40);
+    @include adaptiveValue("font-size", 80, 40, 1920, 320);
 }
 
 .h2 {
-    @include adaptiveValue("font-size", 60, 30);
+    @include adaptiveValue("font-size", 60, 30,
+        1920,
+        320);
 }
 
 .h3 {
-    @include adaptiveValue("font-size", 46, 23);
+    @include adaptiveValue("font-size", 46, 23,
+        1920,
+        320);
 }
 
 .h4 {
-    @include adaptiveValue("font-size", 34, 20);
+    @include adaptiveValue("font-size", 34, 20,
+        1920,
+        320);
 }
 
 .h5 {
-    @include adaptiveValue("font-size", 24, 18);
+    @include adaptiveValue("font-size", 24, 18,
+        1920,
+        320);
 }
 
 .h6 {
-    @include adaptiveValue("font-size", 16, 14);
+    @include adaptiveValue("font-size", 16, 14,
+        1920,
+        320);
 }
 
 .p1 {
-    @include adaptiveValue("font-size", 24, 20);
+    @include adaptiveValue("font-size", 24, 20,
+        1920,
+        320);
     font-family: "Ubuntu";
 }
 
 .p2 {
-    @include adaptiveValue("font-size", 16, 14);
+    @include adaptiveValue("font-size", 16, 14,
+        1920,
+        320);
     font-family: "Ubuntu";
 }
 
 .p3 {
-    @include adaptiveValue("font-size", 14, 12);
+    @include adaptiveValue("font-size", 14, 12,
+        1920,
+        320);
     font-family: "Ubuntu";
 }
 
@@ -78,31 +101,24 @@ main {
     @include adaptiveValue("padding-bottom", 100, 50);
 }
 
-.swiper-controls {}
 
-.swiper-pagination {}
-
-.swiper-button-disabled {
-    @media (any-hover: hover) {
-        &:hover {
-            background-color: inherit;
-        }
-    }
-}
 
 .button-main {
-    padding: 0px 40px;
+    padding: 0px 35px;
     background-color: $primary;
     color: #fff;
     transition: all 0.3s ease 0s;
-    border-radius: 3px;
+    border-radius: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60px;
+    height: 54px;
     width: fit-content;
-    @include adaptiveValue("font-size", 16, 14);
+    @include adaptiveValue("font-size", 14, 12);
     cursor: pointer;
+    font-family: "Ubuntu";
+    font-weight: bold;
+    text-transform: uppercase;
 
     @media (max-width: em(1150)) {
         padding: 0px 30px;
@@ -118,18 +134,7 @@ main {
 
     @media (any-hover: hover) {
         &:hover {
-            background-color: #0D2362;
-        }
-    }
-
-    &.inversed {
-        background-color: #fff;
-        color: $primary;
-
-        @media (any-hover: hover) {
-            &:hover {
-                background-color: #E8EBF2;
-            }
+            background-color: $hover;
         }
     }
 
@@ -147,6 +152,7 @@ main {
     }
 }
 
+
 .swiper-controls {
     display: flex;
     flex-direction: row;
@@ -161,30 +167,66 @@ main {
     gap: 10px;
 }
 
+.swiper-pagination-bullets {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
 .swiper-pagination-bullet {
-    height: 10px;
-    width: 10px;
+    height: 8px;
+    width: 8px;
     opacity: 1;
     margin: 0 !important;
     transition: all 0.3s ease 0s;
+    background-color: $bgDark;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: $primary;
+    background-color: $accent;
+}
+
+.swiper-btn-prev {
+    svg {
+        transform: rotate(-180deg);
+    }
 }
 
 .swiper-btn {
-    height: 15px;
+    height: 55px;
+    width: 55px;
+    background-color: #C19570;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease 0s;
 
     @media (any-hover: hover) {
         &:hover {
-            svg path {
-                transition: all 0.3s ease 0s;
-                fill: $primary;
-            }
+            background-color: $bgDark;
         }
     }
 
+    @media (max-width: em(1200)) {
+        height: 45px;
+        width: 45px;
+    }
+}
+
+.swiper-buttons {
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+}
+
+.swiper-controls {}
+
+.swiper-pagination {}
+
+.swiper-button-disabled {
+    background-color: $bgDark;
 }
 
 .swiper-wrapper {
@@ -300,6 +342,10 @@ main {
     right: 40px;
     top: 50%;
     transform: translate(0px, -50%);
+
+    @media (max-width: em(1460)) {
+        right: 15px;
+    }
 
     // .socials__item
     &__item {
