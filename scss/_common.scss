@@ -178,7 +178,6 @@ main {
     }
 }
 
-
 .swiper-controls {
     display: flex;
     flex-direction: row;
@@ -294,11 +293,8 @@ main {
 }
 
 .block-title {
-    @include adaptiveValue("margin-bottom", 40, 20);
-
-    span {
-        color: $primary;
-    }
+    @include adaptiveValue("font-size", 60, 30);
+    color: $head;
 }
 
 .modal {

@@ -1,0 +1,278 @@
+.products {
+    @include adaptiveValue("padding-top", 100, 50);
+
+    // .products__top
+    &__top {
+        display: flex;
+        align-items: center;
+        @include adaptiveValue("margin-bottom", 50, 25);
+
+        @media (max-width:$tablet) {
+            flex-direction: column;
+            gap: 25px;
+        }
+    }
+
+    // .products__buttons
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        justify-content: center;
+        width: 100%;
+        @include adaptiveValue("gap", 20, 10);
+        flex-wrap: wrap;
+    }
+
+    // .products__button
+    &__button {
+        background-color: #fff;
+        border: 2px solid $accent;
+        color: $mainText;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $accent;
+                color: #fff;
+            }
+        }
+
+        &.active {
+            background-color: $accent;
+            color: #fff;
+
+        }
+    }
+
+    // .products__body
+    &__body {}
+
+    // .products__showmore
+    &__showmore {
+        margin: 0px auto;
+    }
+}
+
+.body-products {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    @include adaptiveValue("gap", 50, 15, 1920, 991);
+    @include adaptiveValue("margin-bottom", 50, 25);
+
+    @media (max-width:$tablet) {
+        gap: 15px;
+    }
+
+    @media (max-width: em(1200)) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (max-width: em(850)) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: em(580)) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: em(420)) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .body-products__item
+    &__item {
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                .item-products__name {
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    // .body-products__item--big
+    &__item--big {
+        border: 1px solid $bgDark;
+        flex-direction: row;
+        grid-column: span 2;
+
+        @media (max-width: em(420)) {
+            flex-direction: column;
+
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                border: 1px solid $primary;
+            }
+        }
+
+        .item-products__body {
+            @include adaptiveValue("padding-top", 50, 25);
+            @include adaptiveValue("padding-bottom", 50, 25);
+            @include adaptiveValue("padding-right", 40, 20);
+            @include adaptiveValue("padding-left", 40, 20);
+            text-align: center;
+
+            .item-products__name {
+                flex: 1 1 auto;
+                font-weight: 500;
+                margin: 0;
+                padding: 0;
+                border: none;
+            }
+
+            .item-products__button {
+                width: 100%;
+                margin: 0px auto;
+            }
+
+            .item-products__price {
+                @include adaptiveValue("margin-bottom", 30, 15);
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    // .body-products__item--small
+    &__item--small {
+        .item-products__bottom {
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .item-products__price {
+            flex-direction: column-reverse;
+        }
+
+    }
+}
+
+.item-products {
+
+    // .item-products__img
+    &__img {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+
+            @media (max-width: em(420)) {
+                max-height: 300px;
+            }
+        }
+    }
+
+    // .item-products__hint
+    &__hint {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        z-index: 2;
+        bottom: 15px;
+        left: 15px;
+
+        background-color: $accent;
+        color: #fff;
+        border-radius: 50%;
+        font-weight: 500;
+        font-size: 24px;
+    }
+
+    // .item-products__body
+    &__body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .item-products__bottom
+    &__bottom {}
+
+    // .item-products__name
+    &__name {
+        text-transform: uppercase;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $bgDark;
+        transition: all 0.3s ease 0s;
+    }
+
+    // .item-products__price
+    &__price {
+        display: flex;
+        @include adaptiveValue("gap", 15, 5);
+    }
+
+    // .item-products__price--new
+    &__price--new {
+        font-weight: 500;
+        color: $head;
+    }
+
+    // .item-products__price--old
+    &__price--old {
+        text-decoration: line-through;
+        color: $mainText;
+    }
+
+    // .item-products__button
+    &__button {}
+}
+
+.tags-products {
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+    row-gap: 5px;
+
+    // .tags-products__item
+    &__item {
+        font-family: "Ubuntu";
+        font-size: 10px;
+        font-weight: 700;
+        padding: 5px 10px;
+        color: #fff;
+        text-transform: uppercase;
+        border-radius: 30px;
+        white-space: nowrap;
+
+        &.purple {
+            background-color: #A65EDE;
+        }
+
+        &.red {
+            background-color: #DE665E;
+        }
+
+        &.yellow {
+            background-color: #DEA65E;
+        }
+    }
+}
