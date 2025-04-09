@@ -28,7 +28,7 @@ introSwiperSide.controller.control = introSwiper;
 
 const bodyProductionSwiper = new Swiper(".body-production__slider", {
     slidesPerView: 1,
-    spaceBetween: 0,
+    spaceBetween: 10,
     speed: 3000,
     navigation: {
         prevEl: ".body-production__swiper-btn-prev",
