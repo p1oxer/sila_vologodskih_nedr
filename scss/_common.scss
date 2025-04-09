@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,regular,500,700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Onest:regular,500,700&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Raleway:900&display=swap);
 
@@ -101,7 +101,33 @@ main {
     @include adaptiveValue("padding-bottom", 100, 50);
 }
 
+.button-arrow {
+    font-weight: 700;
+    color: $head;
+    @include adaptiveValue("font-size", 16, 14);
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s ease 0s;
 
+    svg path {
+        stroke: $head;
+        transition: all 0.3s ease 0s;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: $hover;
+            gap: 35px;
+
+            svg path {
+                stroke: $hover;
+            }
+        }
+    }
+}
 
 .button-main {
     padding: 0px 35px;
@@ -345,6 +371,11 @@ main {
 
     @media (max-width: em(1460)) {
         right: 15px;
+        opacity: 0.7;
+    }
+
+    @media (max-width:$tablet) {
+        display: none;
     }
 
     // .socials__item

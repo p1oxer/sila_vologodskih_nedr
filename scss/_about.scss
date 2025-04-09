@@ -1,0 +1,132 @@
+.about {
+
+    // .about__container
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1.55fr;
+        border-bottom: 1px solid $bgDark;
+
+        @media (max-width:$mobileSmall) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    // .about__title
+    &__title {
+        position: relative;
+        width: 100%;
+        line-height: 1.4;
+        font-weight: 400;
+        text-transform: uppercase;
+
+        padding-left: calc((100vw - 1630px) / 2);
+        @include adaptiveValue("padding-right", 50, 25, 1920, 991);
+        @include adaptiveValue("padding-top", 100, 50, 1920, 481);
+        @include adaptiveValue("padding-bottom", 100, 50, 1920, 481);
+
+        @media (min-width:$mobileSmall) {
+            border-right: 1px solid $bgDark;
+        }
+
+        @media (max-width: em(1660)) {
+            padding-left: 15px;
+        }
+
+        @media (max-width:$tablet) {
+            padding-right: 15px;
+        }
+
+        @media (max-width:$mobileSmall) {
+            border-bottom: 1px solid $bgDark;
+            padding: 15px;
+
+            p {
+                text-align: center;
+            }
+        }
+    }
+
+    // .about__title-bg
+    &__title-bg {
+
+        margin-top: 25px;
+
+        img {
+            max-width: 140px;
+        }
+
+        @media (max-width:$mobileSmall) {
+            position: absolute;
+            z-index: -1;
+            opacity: .5;
+            margin-top: 0;
+            left: 50%;
+            transform: translate(-50%, 0px);
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.body-about {
+    display: flex;
+    @include adaptiveValue("gap", 65, 30, 1920, 991);
+    @include adaptiveValue("padding-left", 85, 25, 1920, 991);
+    @include adaptiveValue("padding-top", 100, 50, 1920, 481);
+    @include adaptiveValue("padding-bottom", 100, 50, 1920, 481);
+
+    @media (max-width:$tablet) {
+        padding-left: 25px;
+        padding-right: 15px;
+        flex-direction: column;
+    }
+
+    @media (max-width:$mobile) {
+        padding-left: 15px;
+    }
+
+    @media (max-width:$mobileSmall) {
+        padding: 25px 15px;
+    }
+
+    // .body-about__title
+    &__title {
+        font-family: "Sweet Mavka Script";
+        @include adaptiveValue("font-size", 26, 18);
+        @include adaptiveValue("margin-bottom", 25, 15);
+        color: $primary;
+    }
+
+    // .body-about__text
+    &__text {
+        @include adaptiveValue("margin-bottom", 30, 15);
+        font-family: "Ubuntu";
+
+        p {
+            color: $mainText;
+            @include adaptiveValue("font-size", 16, 14);
+            line-height: 1.5;
+
+            &:not(:last-child) {
+                margin-bottom: rem(20);
+            }
+
+        }
+    }
+
+    // .body-about__photo
+    &__photo {
+        @media (max-width:$tablet) {
+            display: none;
+        }
+
+        img {
+            @media (max-width: em(1300)) {
+                max-width: 280px;
+            }
+        }
+    }
+}
