@@ -25,3 +25,22 @@ const introSwiperSide = new Swiper(".body-intro__slider-side", {
 
 introSwiper.controller.control = introSwiperSide;
 introSwiperSide.controller.control = introSwiper;
+
+const bodyProductionSwiper = new Swiper(".body-production__slider", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    speed: 3000,
+    navigation: {
+        prevEl: ".body-production__swiper-btn-prev",
+        nextEl: ".body-production__swiper-btn-next",
+    },
+});
+
+const innerProductionSwiper = new Swiper(".inner-production__slider", {
+    slidesPerView: 2,
+    spaceBetween: 10,
+    speed: 3000,
+});
+
+bodyProductionSwiper.controller.control = innerProductionSwiper;
+innerProductionSwiper.controller.control = bodyProductionSwiper;

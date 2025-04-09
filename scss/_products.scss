@@ -1,5 +1,6 @@
 .products {
     @include adaptiveValue("padding-top", 100, 50);
+    @include adaptiveValue("padding-bottom", 100, 50);
 
     // .products__top
     &__top {
