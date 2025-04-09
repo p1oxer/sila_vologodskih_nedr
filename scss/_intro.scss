@@ -121,7 +121,6 @@
 
         @media (max-width:$mobile) {
             width: 100%;
-            height: 50vh;
         }
     }
 
@@ -228,6 +227,13 @@
             @media (min-width:$mobile) {
                 width: 100%;
                 height: 100%;
+            }
+
+            @media (max-width:$mobile) {
+                max-height: 50vh;
+                width: 100%;
+                object-fit: cover;
+                min-height: 300px;
             }
 
             max-width: 100%;
