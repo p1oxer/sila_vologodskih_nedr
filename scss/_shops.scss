@@ -1,0 +1,142 @@
+.shops {
+    @include adaptiveValue("padding-top", 100, 50);
+    @include adaptiveValue("padding-bottom", 100, 50);
+    border-bottom: 1px solid $bgDark;
+
+    // .shops__title
+    &__title {
+        @include adaptiveValue("margin-bottom", 60, 30);
+    }
+
+    // .shops__marketplaces
+    &__marketplaces {}
+
+    // .shops__body
+    &__body {}
+
+    // .shops__showmore
+    &__showmore {
+        margin: 0px auto;
+    }
+}
+
+
+.marketplaces-shops {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    @include adaptiveValue("column-gap", 120, 20);
+    row-gap: 30px;
+    @include adaptiveValue("margin-bottom", 60, 30);
+
+    // .marketplaces-shops__item
+    &__item {
+        display: flex;
+        align-items: center;
+        @include adaptiveValue("gap", 30, 15);
+
+        @media (any-hover: hover) {
+            &:hover {
+                .marketplaces-shops__name {
+                    color: $primary;
+                }
+
+                .marketplaces-shops__button {
+                    color: $hover;
+                    gap: 35px;
+
+                    svg path {
+                        stroke: $hover;
+                    }
+                }
+            }
+        }
+    }
+
+    // .marketplaces-shops__name
+    &__name {
+        @include adaptiveValue("font-size", 34, 30);
+        margin-bottom: 15px;
+        transition: all 0.3s ease 0s;
+    }
+
+    // .marketplaces-shops__button
+    &__button {
+        color: $primary;
+
+        svg path {
+            stroke: $primary;
+        }
+    }
+}
+
+.body-shops {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid $bgDark;
+    @include adaptiveValue("margin-bottom", 50, 25);
+
+    @media (max-width: em(600)) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .body-shops__item
+    &__item {}
+}
+
+.item-shops {
+    display: flex;
+    @include adaptiveValue("gap", 30, 20, 1920, 991);
+    border-bottom: 1px solid $bgDark;
+
+    @media (max-width:$tablet) {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    &:nth-child(odd) {
+        border-right: 1px solid $bgDark;
+        @include adaptiveValue("padding-right", 60, 30, 1920, 991);
+        @include adaptiveValue("padding-top", 60, 30, 1920, 991);
+        @include adaptiveValue("padding-bottom", 60, 30, 1920, 991);
+
+        @media (max-width:$tablet) {
+            padding-left: 0;
+        }
+
+        @media (max-width: em(600)) {
+            border-right: none;
+        }
+    }
+
+    &:nth-child(even) {
+        @include adaptiveValue("padding-left", 60, 15, 1920, 991);
+        @include adaptiveValue("padding-top", 60, 30, 1920, 991);
+        @include adaptiveValue("padding-bottom", 60, 30, 1920, 991);
+
+        @media (max-width: em(600)) {
+            padding-left: 0;
+        }
+    }
+
+    // .item-shops__name
+    &__name {
+        text-transform: uppercase;
+        font-weight: 500;
+        color: $head;
+        line-height: 1.4;
+        max-width: 290px;
+    }
+
+    // .item-shops__info
+    &__info {
+        color: $mainText;
+
+        .p1 {
+            font-weight: 300;
+            color: $head;
+            margin-bottom: 5px;
+        }
+    }
+}
