@@ -54,7 +54,7 @@
 
     // .marketplaces-shops__name
     &__name {
-        @include adaptiveValue("font-size", 34, 30);
+        @include adaptiveValue("font-size", 34, 24);
         margin-bottom: 15px;
         transition: all 0.3s ease 0s;
     }
