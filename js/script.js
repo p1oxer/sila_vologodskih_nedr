@@ -21,6 +21,8 @@ document.querySelectorAll('a[href^="#"').forEach((link) => {
             top: offsetPosition,
             behavior: "smooth",
         });
+        document.body.classList.remove("menu-open");
+        document.body.classList.remove("lock");
     });
 });
 

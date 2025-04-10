@@ -24,6 +24,10 @@ $accent: #C19570;
 body {
     font-family: "Onest";
     line-height: 1.2;
+
+    &.lock {
+        overflow: hidden;
+    }
 }
 
 main {
@@ -360,7 +364,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    z-index: 5;
+    z-index: 4;
     right: 40px;
     top: 50%;
     transform: translate(0px, -50%);
