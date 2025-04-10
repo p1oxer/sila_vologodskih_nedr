@@ -34,6 +34,10 @@ const bodyProductionSwiper = new Swiper(".body-production__slider", {
         prevEl: ".body-production__swiper-btn-prev",
         nextEl: ".body-production__swiper-btn-next",
     },
+    effect: "fade",
+    fadeEffect: {
+        crossFade: true,
+    },
 });
 
 const innerProductionSwiper = new Swiper(".inner-production__slider", {

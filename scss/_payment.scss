@@ -1,0 +1,87 @@
+.payment {
+
+    border-bottom: 1px solid $bgDark;
+    border-top: 1px solid $bgDark;
+    position: relative;
+
+    &__bg {
+        position: absolute;
+        right: 0;
+        bottom: 100px;
+        z-index: -1;
+    }
+}
+
+.body-payment {
+    display: flex;
+
+    // .body-payment__item
+    &__item {}
+}
+
+.item-payment {
+    @include adaptiveValue("padding-top", 100, 50);
+    @include adaptiveValue("padding-bottom", 100, 50);
+    display: flex;
+
+    &:first-child {
+        width: 40%;
+        border-right: 1px solid $bgDark;
+        flex-direction: column;
+        @include adaptiveValue("gap", 80, 40, 1920, 991);
+
+        .item-payment__content {
+            padding-left: calc((100vw - 1630px) / 2);
+            @include adaptiveValue("padding-right", 70, 25, 1920, 991);
+
+        }
+    }
+
+    &:nth-child(2) {
+        flex-direction: row;
+        @include adaptiveValue("padding-left", 90, 45, 1920, 991);
+        @include adaptiveValue("gap", 60, 45, 1920, 991);
+    }
+
+    // .item-payment__content
+    &__content {}
+
+    // .item-payment__title
+    &__title {
+        text-transform: uppercase;
+        @include adaptiveValue("margin-bottom", 40, 20);
+    }
+
+    // .item-payment__text
+    &__text {
+        color: $mainText;
+        display: flex;
+        gap: 15px;
+        flex-direction: column;
+        line-height: 1.4;
+    }
+
+    // .item-payment__list
+    &__list {
+        li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            &:not(:last-child) {
+                margin-bottom: rem(15);
+            }
+
+            &::before {
+                content: '';
+                width: 6px;
+                height: 6px;
+                background-color: $accent;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    // .item-payment__img
+    &__img {}
+}
