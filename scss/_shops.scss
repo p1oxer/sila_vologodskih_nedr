@@ -8,12 +8,6 @@
         @include adaptiveValue("margin-bottom", 60, 30);
     }
 
-    // .shops__marketplaces
-    &__marketplaces {}
-
-    // .shops__body
-    &__body {}
-
     // .shops__showmore
     &__showmore {
         margin: 0px auto;
@@ -79,15 +73,16 @@
         display: flex;
         flex-direction: column;
     }
-
-    // .body-shops__item
-    &__item {}
 }
 
 .item-shops {
     display: flex;
     @include adaptiveValue("gap", 30, 20, 1920, 991);
     border-bottom: 1px solid $bgDark;
+
+    &.hidden {
+        display: none;
+    }
 
     @media (max-width:$tablet) {
         flex-direction: column;

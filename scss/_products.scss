@@ -45,9 +45,6 @@
         }
     }
 
-    // .products__body
-    &__body {}
-
     // .products__showmore
     &__showmore {
         margin: 0px auto;
@@ -55,11 +52,15 @@
 }
 
 .body-products {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(5, 1fr);
 
     @include adaptiveValue("gap", 50, 15, 1920, 991);
     @include adaptiveValue("margin-bottom", 50, 25);
+
+    &.active {
+        display: grid;
+    }
 
     @media (max-width:$tablet) {
         gap: 15px;

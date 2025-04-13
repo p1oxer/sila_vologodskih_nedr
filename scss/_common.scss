@@ -303,28 +303,53 @@ main {
 
 .modal {
     display: none;
-    max-width: 540px;
+    max-width: 790px;
     position: relative;
+    width: 100%;
 
     .privacy-policy {
-        max-width: 100%;
+
+        a {
+            color: $primary;
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+        }
     }
 
     button {
-        width: 100%;
+        margin-left: auto;
+    }
+}
+
+.modal__bottom {
+    display: flex;
+    justify-content: space-between;
+    @include adaptiveValue("gap", 165, 30);
+    margin-top: 15px;
+}
+
+
+
+.input {
+    &:not(:last-child) {
+        margin-bottom: rem(15);
     }
 }
 
 .fancybox__content {
-    @include adaptiveValue("padding", 40, 20);
-    @include adaptiveValue("padding-top", 40, 40);
-    border-radius: 3px;
+    @include adaptiveValue("padding-bottom", 90, 25);
+    @include adaptiveValue("padding-top", 80, 25);
+    @include adaptiveValue("padding-right", 100, 15);
+    @include adaptiveValue("padding-left", 100, 15);
     color: $mainText;
 
     input {
-        border-color: $strokeLight;
+        border: 1px solid $hover;
+        padding: 18px 25px;
+        border-radius: 30px;
         color: $mainText;
         width: 100%;
+        outline: none;
 
         &::placeholder {
             color: $mainText;
@@ -339,20 +364,30 @@ main {
 
 .modal__close {
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 30px;
+    top: 30px;
     cursor: pointer;
+
+    @media (max-width:$mobile) {
+        right: 15px;
+        top: 15px;
+    }
+}
+
+.modal-done {
+    button {
+        margin-top: 30px;
+    }
 }
 
 .modal__title {
-    color: #000;
-    text-align: center;
+    color: $head;
     @include adaptiveValue("margin-bottom", 40, 20);
+    text-transform: uppercase;
 }
 
 .modal__text {
-    color: #000;
-    margin-bottom: 20px;
+    font-weight: 300;
 }
 
 .fancybox__backdrop {

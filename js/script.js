@@ -26,87 +26,84 @@ document.querySelectorAll('a[href^="#"').forEach((link) => {
     });
 });
 
-// // tabs ==========
-// const tabButtons = document.querySelectorAll(".body-sertificates__buttons-item");
-// const tabContents = document.querySelectorAll(".body-sertificates__item");
+// tabs ==========
+const tabButtons = document.querySelectorAll(".products__button");
+const tabContents = document.querySelectorAll(".body-products");
 
-// if (tabButtons && tabContents) {
-//     tabButtons.forEach((tabBtn) => {
-//         tabBtn.addEventListener("click", () => {
-//             const tabId = tabBtn.getAttribute("data-id");
+if (tabButtons && tabContents) {
+    tabButtons.forEach((tabBtn) => {
+        tabBtn.addEventListener("click", () => {
+            const tabId = tabBtn.getAttribute("data-id");
 
-//             tabButtons.forEach((btn) => btn.classList.remove("active"));
-//             tabBtn.classList.add("active");
+            tabButtons.forEach((btn) => btn.classList.remove("active"));
+            tabBtn.classList.add("active");
 
-//             tabContents.forEach((content) => {
-//                 content.classList.remove("active");
+            tabContents.forEach((content) => {
+                content.classList.remove("active");
 
-//                 if (content.id === tabId) {
-//                     content.classList.add("active");
-//                 }
-//             });
-//         });
-//     });
-// }
+                if (content.id === tabId) {
+                    content.classList.add("active");
+                }
+            });
+        });
+    });
+}
 
 // showmore ==========
-// const certificatesShowMore = document.querySelector(".body-sertificates__showmore");
+const shopsShowMore = document.querySelector(".shops__showmore");
 
-// const hiddenElementsCertificates = document.querySelectorAll(
-//     ".body-sertificates__buttons-item.hidden"
-// );
+const hiddenElementsShops = document.querySelectorAll(".item-shops.hidden");
 
-// function showMore(elementList, event) {
-//     const isHidden = elementList[0].classList.contains("hidden");
+function showMore(elementList, event) {
+    const isHidden = elementList[0].classList.contains("hidden");
 
-//     elementList.forEach((element) => {
-//         element.classList.toggle("hidden");
-//     });
+    elementList.forEach((element) => {
+        element.classList.toggle("hidden");
+    });
 
-//     event.target.textContent = isHidden ? "Скрыть" : "Показать ещё";
-// }
+    event.target.textContent = isHidden ? "Скрыть" : "Показать ещё";
+}
 
-// certificatesShowMore.addEventListener("click", function (event) {
-//     showMore(hiddenElementsCertificates, event);
-// });
+shopsShowMore.addEventListener("click", function (event) {
+    showMore(hiddenElementsShops, event);
+});
 
 // modals =====
 
-// const modalButtons = document.querySelectorAll(".modal-open");
-// const modal = document.querySelector(".modal-request");
+const modalButtons = document.querySelectorAll(".modal-open");
+const modalCall = document.querySelector(".modal-call");
+modalButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        new Fancybox(
+            [
+                {
+                    src: modalCall,
+                    type: "html",
+                },
+            ],
+            {
+                closeButton: false,
+                hideScrollbar: false,
+            }
+        );
+    });
+});
 
-// modalButtons.forEach((button) => {
-//     button.addEventListener("click", () => {
-//         new Fancybox(
-//             [
-//                 {
-//                     src: modal,
-//                     type: "html",
-//                 },
-//             ],
-//             {
-//                 closeButton: false,
-//                 hideScrollbar: false,
-//             }
-//         );
-//     });
-// });
-
-// const modalDoneButtons = document.querySelectorAll(".next-popup");
-// const modalDone = document.querySelector(".modal-done");
-// modalDoneButtons.forEach((button) => {
-//     button.addEventListener("click", () => {
-//         new Fancybox(
-//             [
-//                 {
-//                     src: modalDone,
-//                     type: "html",
-//                 },
-//             ],
-//             {
-//                 closeButton: false,
-//                 hideScrollbar: false,
-//             }
-//         );
-//     });
-// });
+const modalDoneButtons = document.querySelectorAll(".next-popup");
+const modalDone = document.querySelector(".modal-done");
+modalDoneButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        new Fancybox(
+            [
+                {
+                    src: modalDone,
+                    type: "html",
+                },
+            ],
+            {
+                closeButton: false,
+                hideScrollbar: false,
+            }
+        );
+    });
+});

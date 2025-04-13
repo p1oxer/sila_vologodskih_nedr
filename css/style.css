@@ -581,68 +581,150 @@ main {
 
 .modal {
   display: none;
-  max-width: 540px;
+  max-width: 790px;
   position: relative;
+  width: 100%;
 }
-.modal .privacy-policy {
-  max-width: 100%;
+.modal .privacy-policy a {
+  color: #6096DE;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
 }
 .modal button {
-  width: 100%;
+  margin-left: auto;
+}
+
+.modal__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+@media (min-width: 75em) {
+  .modal__bottom {
+    gap: 10.3125rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 75em) {
+  @supports (gap: clamp( 1.875rem , -1.1931818182rem  +  15.3409090909vw , 10.3125rem )) {
+    .modal__bottom {
+      gap: clamp( 1.875rem , -1.1931818182rem  +  15.3409090909vw , 10.3125rem );
+    }
+  }
+  @supports not (gap: clamp( 1.875rem , -1.1931818182rem  +  15.3409090909vw , 10.3125rem )) {
+    .modal__bottom {
+      gap: calc(1.875rem + 8.4375 * (100vw - 20rem) / 55);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .modal__bottom {
+    gap: 1.875rem;
+  }
+}
+
+.input:not(:last-child) {
+  margin-bottom: 0.9375rem;
 }
 
 .fancybox__content {
-  border-radius: 3px;
   color: #464D58;
 }
 @media (min-width: 75em) {
   .fancybox__content {
-    padding: 2.5rem;
+    padding-bottom: 5.625rem;
   }
 }
 @media (min-width: 20em) and (max-width: 75em) {
-  @supports (padding: clamp( 1.25rem , 0.7954545455rem  +  2.2727272727vw , 2.5rem )) {
+  @supports (padding-bottom: clamp( 1.5625rem , 0.0852272727rem  +  7.3863636364vw , 5.625rem )) {
     .fancybox__content {
-      padding: clamp( 1.25rem , 0.7954545455rem  +  2.2727272727vw , 2.5rem );
+      padding-bottom: clamp( 1.5625rem , 0.0852272727rem  +  7.3863636364vw , 5.625rem );
     }
   }
-  @supports not (padding: clamp( 1.25rem , 0.7954545455rem  +  2.2727272727vw , 2.5rem )) {
+  @supports not (padding-bottom: clamp( 1.5625rem , 0.0852272727rem  +  7.3863636364vw , 5.625rem )) {
     .fancybox__content {
-      padding: calc(1.25rem + 1.25 * (100vw - 20rem) / 55);
+      padding-bottom: calc(1.5625rem + 4.0625 * (100vw - 20rem) / 55);
     }
   }
 }
 @media (max-width: 20em) {
   .fancybox__content {
-    padding: 1.25rem;
+    padding-bottom: 1.5625rem;
   }
 }
 @media (min-width: 75em) {
   .fancybox__content {
-    padding-top: 2.5rem;
+    padding-top: 5rem;
   }
 }
 @media (min-width: 20em) and (max-width: 75em) {
-  @supports (padding-top: clamp( 2.5rem , 2.5rem  +  0vw , 2.5rem )) {
+  @supports (padding-top: clamp( 1.5625rem , 0.3125rem  +  6.25vw , 5rem )) {
     .fancybox__content {
-      padding-top: clamp( 2.5rem , 2.5rem  +  0vw , 2.5rem );
+      padding-top: clamp( 1.5625rem , 0.3125rem  +  6.25vw , 5rem );
     }
   }
-  @supports not (padding-top: clamp( 2.5rem , 2.5rem  +  0vw , 2.5rem )) {
+  @supports not (padding-top: clamp( 1.5625rem , 0.3125rem  +  6.25vw , 5rem )) {
     .fancybox__content {
-      padding-top: calc(2.5rem + 0 * (100vw - 20rem) / 55);
+      padding-top: calc(1.5625rem + 3.4375 * (100vw - 20rem) / 55);
     }
   }
 }
 @media (max-width: 20em) {
   .fancybox__content {
-    padding-top: 2.5rem;
+    padding-top: 1.5625rem;
+  }
+}
+@media (min-width: 75em) {
+  .fancybox__content {
+    padding-right: 6.25rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 75em) {
+  @supports (padding-right: clamp( 0.9375rem , -0.9943181818rem  +  9.6590909091vw , 6.25rem )) {
+    .fancybox__content {
+      padding-right: clamp( 0.9375rem , -0.9943181818rem  +  9.6590909091vw , 6.25rem );
+    }
+  }
+  @supports not (padding-right: clamp( 0.9375rem , -0.9943181818rem  +  9.6590909091vw , 6.25rem )) {
+    .fancybox__content {
+      padding-right: calc(0.9375rem + 5.3125 * (100vw - 20rem) / 55);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .fancybox__content {
+    padding-right: 0.9375rem;
+  }
+}
+@media (min-width: 75em) {
+  .fancybox__content {
+    padding-left: 6.25rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 75em) {
+  @supports (padding-left: clamp( 0.9375rem , -0.9943181818rem  +  9.6590909091vw , 6.25rem )) {
+    .fancybox__content {
+      padding-left: clamp( 0.9375rem , -0.9943181818rem  +  9.6590909091vw , 6.25rem );
+    }
+  }
+  @supports not (padding-left: clamp( 0.9375rem , -0.9943181818rem  +  9.6590909091vw , 6.25rem )) {
+    .fancybox__content {
+      padding-left: calc(0.9375rem + 5.3125 * (100vw - 20rem) / 55);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .fancybox__content {
+    padding-left: 0.9375rem;
   }
 }
 .fancybox__content input {
-  border-color: #DDC5B1;
+  border: 1px solid #AAC4E7;
+  padding: 18px 25px;
+  border-radius: 30px;
   color: #464D58;
   width: 100%;
+  outline: none;
 }
 .fancybox__content input::-moz-placeholder {
   color: #464D58;
@@ -657,14 +739,24 @@ main {
 
 .modal__close {
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 30px;
+  top: 30px;
   cursor: pointer;
+}
+@media (max-width: 767.98px) {
+  .modal__close {
+    right: 15px;
+    top: 15px;
+  }
+}
+
+.modal-done button {
+  margin-top: 30px;
 }
 
 .modal__title {
-  color: #000;
-  text-align: center;
+  color: #18212E;
+  text-transform: uppercase;
 }
 @media (min-width: 75em) {
   .modal__title {
@@ -690,8 +782,7 @@ main {
 }
 
 .modal__text {
-  color: #000;
-  margin-bottom: 20px;
+  font-weight: 300;
 }
 
 .fancybox__backdrop {
@@ -2085,7 +2176,7 @@ main {
 }
 
 .body-products {
-  display: grid;
+  display: none;
   grid-template-columns: repeat(5, 1fr);
 }
 @media (min-width: 120em) {
@@ -2126,6 +2217,9 @@ main {
   .body-products {
     margin-bottom: 1.5625rem;
   }
+}
+.body-products.active {
+  display: grid;
 }
 @media (max-width: 991.98px) {
   .body-products {
@@ -3223,6 +3317,7 @@ main {
     flex-direction: column;
   }
 }
+
 .item-shops {
   display: flex;
   border-bottom: 1px solid #EDE0D5;
@@ -3243,6 +3338,9 @@ main {
       gap: calc(1.25rem + 0.625 * (100vw - 61.9375rem) / 58.0625);
     }
   }
+}
+.item-shops.hidden {
+  display: none;
 }
 @media (max-width: 991.98px) {
   .item-shops {
